@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package hello;
+
+service HelloService{
+
+  rpc sayHello(HelloReq) returns (HelloResp) {}
+
+  //Only responds when Name is less than 10 Characters
+  rpc sayHelloStrict(HelloReq) returns (HelloResp) {}
+ }
+  message HelloReq{
+  string Name = 1;
+ }
+  message HelloResp{
+  string Result = 1;
+ }
