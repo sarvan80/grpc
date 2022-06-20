@@ -15,7 +15,7 @@ class HelloService(pb2_grpc.HelloServiceServicer):
         return pb2.HelloResp(Result="Hello {}!".format(request.Name))
 
 
-    # def sayHelloStrict(self, request, context):
+    ## def sayHelloStrict(self, request, context):
     #     """Only responds when Name is less than 10 Characters
     #     """
     #     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
